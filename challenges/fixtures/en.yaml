@@ -1,0 +1,32 @@
+# challenges/fixtures/en.yaml
+#
+# English-locale fixture for the Recovery describe challenge.
+# Used by challenges/runner/main.go to produce a bilingual+ end-to-end
+# proof that:
+#   - the circuit-breaker, health-checker, and resilience-facade
+#     primitives all execute against real implementations (no mocks);
+#   - the human-readable run summary emitted by the runner is locale-
+#     aware (CONST-046 anti-hardcoded-content compliance).
+#
+# Schema: flat key -> string map. Lookup miss returns the key verbatim
+# so a missing-key regression is loud, not silent. The runner parses
+# the file in-process with a tiny line-based parser to keep the module
+# dep-graph clean (CONST-051(B)).
+
+locale: "en"
+banner: "=== Recovery describe challenge (EN) ==="
+breaker.label: "Circuit breaker"
+breaker.success: "closed-state success: payload=%s"
+breaker.tripped: "breaker tripped after %d failures: state=%s"
+breaker.recovered: "breaker recovered to %s after reset"
+health.label: "Health checker"
+health.healthy: "healthy probe observed (status=%s, error=%v)"
+health.unhealthy: "unhealthy probe observed (status=%s, error=%v)"
+facade.label: "Resilience facade"
+facade.executed: "facade.Execute returned: err=%v"
+facade.stats: "facade.Stats keys: %v"
+result.success: "Recovery primitives confirmed working end-to-end."
+result.failure: "Recovery primitive regression detected; investigate."
+expect.breaker.name: "round-280-breaker"
+expect.health.name: "round-280-health"
+expect.facade.endpoint: "round-280-endpoint"

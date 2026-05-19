@@ -1,0 +1,21 @@
+# challenges/fixtures/es.yaml
+#
+# Español locale fixture for the Recovery describe challenge.
+
+locale: "es"
+banner: "=== Reto de descripción Recovery (ES) ==="
+breaker.label: "Disyuntor"
+breaker.success: "éxito en estado cerrado: carga=%s"
+breaker.tripped: "disyuntor abierto tras %d fallos: estado=%s"
+breaker.recovered: "disyuntor recuperado a %s después del reinicio"
+health.label: "Verificador de salud"
+health.healthy: "sonda saludable observada (estado=%s, error=%v)"
+health.unhealthy: "sonda no saludable observada (estado=%s, error=%v)"
+facade.label: "Fachada de resiliencia"
+facade.executed: "facade.Execute devolvió: err=%v"
+facade.stats: "claves de facade.Stats: %v"
+result.success: "Primitivas Recovery confirmadas funcionando de extremo a extremo."
+result.failure: "Regresión de primitiva Recovery detectada; investigar."
+expect.breaker.name: "round-280-breaker"
+expect.health.name: "round-280-health"
+expect.facade.endpoint: "round-280-endpoint"

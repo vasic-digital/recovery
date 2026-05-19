@@ -1,4 +1,63 @@
-# Environment files
+# Recovery — .gitignore
+# CONST-053 (no-versioned-build-artifacts) compliant.
+
+# ---------------------------------------------------------------------------
+# Environment / secrets (CONST-042 + CONST-053 sensitive-data class)
+# ---------------------------------------------------------------------------
 .env
-.env.local
-.env.*.local
+.env.*
+*.env
+!.env.example
+.netrc
+secrets/
+api_keys.sh
+*.pem
+*.key
+*.crt
+id_rsa*
+id_ed25519*
+
+# ---------------------------------------------------------------------------
+# Build artefacts (CONST-053 build-artefacts class)
+# ---------------------------------------------------------------------------
+/bin/
+/build/
+/dist/
+/out/
+target/
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.o
+*.test
+
+# ---------------------------------------------------------------------------
+# Go caches + coverage (CONST-053 cache + generated-reports classes)
+# ---------------------------------------------------------------------------
+.cache/
+coverage.out
+cover.out
+cover_*.out
+htmlcov/
+*.log
+/challenges/.last-run/
+
+# ---------------------------------------------------------------------------
+# Temp files (CONST-053 temp-files class)
+# ---------------------------------------------------------------------------
+*.tmp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+*.orig
+*.rej
+
+# ---------------------------------------------------------------------------
+# OS / IDE personal state (CONST-053 OS/IDE class)
+# ---------------------------------------------------------------------------
+.idea/
+.history/
+.vscode/

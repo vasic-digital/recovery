@@ -1,0 +1,21 @@
+# challenges/fixtures/de.yaml
+#
+# Deutsch locale fixture for the Recovery describe challenge.
+
+locale: "de"
+banner: "=== Recovery Beschreibungs-Challenge (DE) ==="
+breaker.label: "Schutzschalter"
+breaker.success: "Erfolg im geschlossenen Zustand: Nutzlast=%s"
+breaker.tripped: "Schutzschalter ausgelöst nach %d Fehlern: Zustand=%s"
+breaker.recovered: "Schutzschalter erholte sich nach Reset zu %s"
+health.label: "Gesundheits-Prüfer"
+health.healthy: "gesunde Sonde beobachtet (Status=%s, Fehler=%v)"
+health.unhealthy: "ungesunde Sonde beobachtet (Status=%s, Fehler=%v)"
+facade.label: "Resilienz-Fassade"
+facade.executed: "facade.Execute lieferte: err=%v"
+facade.stats: "facade.Stats-Schlüssel: %v"
+result.success: "Recovery-Primitive end-to-end als funktionsfähig bestätigt."
+result.failure: "Recovery-Primitiv-Regression erkannt; untersuchen."
+expect.breaker.name: "round-280-breaker"
+expect.health.name: "round-280-health"
+expect.facade.endpoint: "round-280-endpoint"

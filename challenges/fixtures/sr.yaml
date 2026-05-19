@@ -1,0 +1,25 @@
+# challenges/fixtures/sr.yaml
+#
+# Srpski (latinica) locale fixture for the Recovery describe challenge.
+# Pair sa en.yaml: oba se učitavaju u istom prolazu, vrednosti se
+# uparuju po ključu, banner po lokalu mora biti UNIKATAN —
+# pairing-mutation izaziva runner ako SR banner kolabira u EN
+# (paired-mutation guard, CONST-035 / Article XI §11.9).
+
+locale: "sr"
+banner: "=== Recovery describe izazov (SR) ==="
+breaker.label: "Kolo prekidača"
+breaker.success: "uspeh u zatvorenom stanju: sadržaj=%s"
+breaker.tripped: "prekidač otvoren nakon %d grešaka: stanje=%s"
+breaker.recovered: "prekidač oporavljen u %s nakon reseta"
+health.label: "Proverivač zdravlja"
+health.healthy: "zdrava sonda zabeležena (status=%s, greška=%v)"
+health.unhealthy: "nezdrava sonda zabeležena (status=%s, greška=%v)"
+facade.label: "Fasada otpornosti"
+facade.executed: "facade.Execute vratio: greška=%v"
+facade.stats: "facade.Stats ključevi: %v"
+result.success: "Recovery primitivi potvrđeni - rade od kraja do kraja."
+result.failure: "Otkriven je regres Recovery primitiva; istraži."
+expect.breaker.name: "round-280-breaker"
+expect.health.name: "round-280-health"
+expect.facade.endpoint: "round-280-endpoint"
